@@ -1,0 +1,135 @@
+*{
+    margin: 0px;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    box-sizing: border-box;
+    background-color: hsl(217, 54%, 11%);
+}
+.center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    background-color: hsl(216, 50%, 16%);
+    margin: 65px auto auto auto;
+    padding: 20px;
+    flex-flow: column ;
+    border-radius: 15px;
+    box-shadow: 0px 0px 16px 2px black;
+}
+.img-box{
+    position: relative;
+}
+.basic-img{
+    width: 100%;
+    height: 280px;
+    margin-top: 0px;
+    border-radius: 15px;
+}
+.view{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    visibility: hidden;
+}
+.basic-img:hover{
+    cursor: pointer;
+    filter: blur(1px);
+
+}
+.basic-img:hover + .view{
+    visibility: visible;
+}
+.view:hover{
+    cursor: pointer;
+    visibility: visible;
+}       
+.title{
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    font-weight: 500;
+    font-size: 22px;
+}
+.title:hover{
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+p{
+    font-size: 15px;
+    color:hsl(215, 51%, 70%);
+    font-weight: 300;
+    padding-right: 35px;
+}
+.eth-time{
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.eth{
+    width: 50%;
+    color: hsl(178, 100%, 50%);
+    display: flex;
+}
+.time{
+    width: 50%;
+    color: hsl(215, 51%, 70%);
+    display: flex;
+    justify-content: flex-end;
+}
+.icon-eth{
+    padding-right: 10px;
+}
+.icon-clock{
+    padding-right: 10px;
+}
+.creation-by{
+    width: 100%;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+    position: relative;
+}
+.creation-by::before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: hsl(215, 32%, 27%);
+    position: absolute;
+    top: -20px;
+}
+.avatar{
+    width: 32px;
+    height: 32px;
+    border: hsl(0, 0%, 100%) solid 1px;
+    border-radius: 50%;
+}
+.create{
+    color: hsl(215, 51%, 70%);
+    padding-left: 15px ;
+}
+span{
+    color: hsl(0, 0%, 100%);
+}
+span:hover{
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+@media (min-width: 376px) {
+        .container{
+        width: 270px;
+        height: 520px;
+    }
+}
+@media(min-width: 0px) and (max-width: 375px){
+    .container{
+        width: 270px;
+        height: 520px;
+    }
+}
